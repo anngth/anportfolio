@@ -1,0 +1,363 @@
+:root {
+  color-scheme: light;
+  --bg: #eef2ea;
+  --text: #151a14;
+  --muted: #687064;
+  --accent: #7c3aed;
+  --border: rgba(21, 26, 20, 0.13);
+  --border-strong: rgba(21, 26, 20, 0.27);
+  --surface: rgba(21, 26, 20, 0.045);
+  --max-width: 1060px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body::selection {
+  background: rgba(124, 58, 237, 0.18);
+}
+
+a {
+  color: inherit;
+  text-decoration-color: rgba(124, 58, 237, 0.45);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    text-decoration-color 180ms ease;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
+
+a:focus-visible {
+  border-radius: 0.35rem;
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+p,
+h1,
+h2,
+h3,
+dl,
+dd,
+ul {
+  margin: 0;
+}
+
+.site-shell {
+  width: min(100%, var(--max-width));
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.hero {
+  position: relative;
+  min-height: min(760px, 100dvh);
+  display: grid;
+  align-content: center;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  padding: clamp(3rem, 9vh, 6.5rem) 0 clamp(3rem, 8vh, 5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.identity {
+  display: grid;
+  gap: 1rem;
+}
+
+.meta,
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+}
+
+h1 {
+  max-width: 11ch;
+  font-size: clamp(3.25rem, 12vw, 7.5rem);
+  font-weight: 650;
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.hero-copy {
+  display: grid;
+  max-width: 720px;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.6vw, 1.14rem);
+  line-height: 1.75;
+}
+
+.positioning {
+  max-width: 780px;
+  color: var(--text);
+  font-size: clamp(1.35rem, 3vw, 2.35rem);
+  font-weight: 500;
+  line-height: 1.18;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.links a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.72rem 1rem;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.links a:hover {
+  border-color: var(--border-strong);
+  background: var(--surface);
+  color: var(--accent);
+}
+
+.section {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.26fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  padding: clamp(3.5rem, 8vw, 6rem) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.text-stack {
+  display: grid;
+  max-width: 760px;
+  gap: 1.25rem;
+  color: var(--text);
+  font-size: clamp(1rem, 1.5vw, 1.08rem);
+  line-height: 1.75;
+}
+
+.project-list {
+  display: grid;
+}
+
+.project {
+  display: grid;
+  gap: 1rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.project:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.project:last-child {
+  padding-bottom: 0;
+}
+
+.project-main {
+  display: grid;
+  max-width: 720px;
+  gap: 0.7rem;
+}
+
+.project h3 {
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 620;
+  line-height: 1.25;
+}
+
+.project h3 a {
+  text-decoration: none;
+}
+
+.project p {
+  max-width: 58ch;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.project-details {
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.9fr) minmax(12rem, 1.25fr) minmax(
+      4rem,
+      0.45fr
+    );
+  gap: 1rem;
+  max-width: 780px;
+  padding-top: 0.35rem;
+}
+
+.project-details div {
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  gap: 0.35rem;
+}
+
+dt {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+dd {
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: end;
+  padding: clamp(3rem, 7vw, 5rem) 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.footer > div {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.links--compact {
+  justify-content: flex-end;
+}
+
+.links--compact a {
+  border-color: transparent;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.links--compact a:hover {
+  background: transparent;
+  border-color: transparent;
+}
+
+.footer-email {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--text);
+  font-weight: 650;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: auto;
+    padding-top: 4rem;
+  }
+
+  h1 {
+    max-width: 100%;
+    font-size: clamp(3rem, 18vw, 5rem);
+  }
+
+  .section,
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    gap: 1.35rem;
+    padding: 3.5rem 0;
+  }
+
+  .project {
+    gap: 1.2rem;
+  }
+
+  .project-details {
+    grid-template-columns: 1fr;
+  }
+
+  .links,
+  .links--compact {
+    justify-content: flex-start;
+  }
+
+  .links a {
+    flex: 1 1 calc(50% - 0.75rem);
+    justify-content: center;
+  }
+
+  .links--compact a {
+    flex: 0 1 auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-shell {
+    padding-inline: 1rem;
+  }
+
+  .links a {
+    flex-basis: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "profile": {
+    "name": "An Nguyen",
+    "role": "Software Engineer",
+    "location": "Ho Chi Minh City, Vietnam",
+    "positioning": "React Native and Node.js backend developer building reliable mobile apps, APIs, and maintainable product systems.",
+    "summary": "I focus on clean mobile experiences, practical backend design, and codebases that stay understandable as products grow.",
+    "email": "an@example.com",
+    "github": "https://github.com/anngth/",
+    "linkedin": "https://www.linkedin.com/in/annguyenthanh/",
+    "resume": "#"
+  },
+  "about": [
+    "I mainly work with React Native on the client side and Node.js on the backend, connecting mobile interfaces with APIs, data flows, authentication, and product logic.",
+    "My approach is steady and detail-oriented: understand the user flow, define clear system boundaries, build the smallest durable solution, and keep the codebase easy to maintain."
+  ],
+  "projects": [
+    {
+      "name": "Mobile Product Foundation",
+      "description": "A React Native app foundation with reusable screens, API integration patterns, and maintainable navigation structure.",
+      "role": "Mobile development",
+      "stack": "React Native, TypeScript, REST APIs",
+      "year": "2025"
+    },
+    {
+      "name": "Backend API Service",
+      "description": "A Node.js backend for product data, authentication flows, and structured integration with client applications.",
+      "role": "Backend development",
+      "stack": "Node.js, PostgreSQL, TypeScript",
+      "year": "2025"
+    }
+  ],
+  "contact": {
+    "eyebrow": "Contact",
+    "availability": "Open to React Native, backend Node.js, and product engineering conversations."
+  }
+}

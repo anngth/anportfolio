@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">AN portfolio logo</title>
+  <rect x="8.5" y="8.5" width="47" height="47" rx="14.5" stroke="#151A14" stroke-opacity="0.18"/>
+  <path d="M18 43L26.5 21L35 43" stroke="#151A14" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M22 35H31" stroke="#151A14" stroke-width="4" stroke-linecap="round"/>
+  <path d="M40 43V21L49 43V21" stroke="#7C3AED" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
